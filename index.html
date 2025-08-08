@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>致我最爱的婷婷 - 生日快乐</title>
+    <title>Happy Birthday! For my love of my life Tingting</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
@@ -74,6 +74,18 @@
           transform: translateY(0px);
         }
       }
+
+      /* 下落爱心动画 */
+      @keyframes fall {
+        0% {
+          transform: translateY(-20px) rotate(0deg);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
@@ -86,7 +98,7 @@
     <!-- 音频背景（默认不自动播放） -->
     <audio id="bgMusic" loop>
       <source
-        src="ting-ting-wish\assets\M500001outPq2OQXYv.mp3"
+        src="https://qbuby.github.io/assets/M500001outPq2OQXYv.mp3"
         type="audio/mpeg"
       />
     </audio>
@@ -123,16 +135,17 @@
         <h1
           class="text-[clamp(2.5rem,8vw,5rem)] font-romantic font-bold text-love-pink mb-6 text-shadow-lg"
         >
-          生日快乐，婷婷
+          Happy Birthday，Tingting!
         </h1>
         <p class="text-[clamp(1rem,3vw,1.5rem)] text-gray-700 max-w-2xl mb-12">
-          在这个特别的日子里，我想把整个世界的温柔都送给你
+          On this special day, I want to give you the tenderness of my whole
+          world
         </p>
         <button
           id="startBtn"
           class="bg-gradient-to-r from-love-pink to-love-purple text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
         >
-          开启我的心意 <i class="fa fa-arrow-down ml-2"></i>
+          Open my heart <i class="fa fa-arrow-down ml-2"></i>
         </button>
       </section>
 
@@ -142,7 +155,7 @@
           <h2
             class="text-[clamp(1.8rem,5vw,3rem)] font-romantic text-center text-love-purple mb-16 text-shadow"
           >
-            我最美丽的小公主
+            My pretty princess ♥
           </h2>
 
           <div
@@ -153,8 +166,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square"
             >
               <img
-                src="https://picsum.photos/id/1027/500/500"
-                alt="与婷婷的甜蜜瞬间"
+                src="https://qbuby.github.io/assets/微信图片_20250809001356_125.jpg"
+                alt="first sight of tingting"
                 class="w-full h-full object-cover"
               />
               <div
@@ -168,8 +181,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square md:col-span-2 md:row-span-2"
             >
               <img
-                src="https://picsum.photos/id/1062/800/800"
-                alt="与婷婷的美好回忆"
+                src="https://qbuby.github.io/assets/微信图片_20250809001417_127.jpg"
+                alt="cutiee tingting"
                 class="w-full h-full object-cover"
               />
               <div
@@ -183,8 +196,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square"
             >
               <img
-                src="https://picsum.photos/id/1083/500/500"
-                alt="婷婷的美丽笑容"
+                src="https://qbuby.github.io/assets/微信图片_2025-08-09_001755_063.jpg"
+                alt="my favorite tingting"
                 class="w-full h-full object-cover"
               />
               <div
@@ -198,8 +211,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square"
             >
               <img
-                src="https://picsum.photos/id/177/500/500"
-                alt="与婷婷的旅行时光"
+                src="https://qbuby.github.io/assets/微信图片_20250809001412_126.jpg"
+                alt="my good puppy"
                 class="w-full h-full object-cover"
               />
               <div
@@ -213,8 +226,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square"
             >
               <img
-                src="https://picsum.photos/id/237/500/500"
-                alt="婷婷的可爱瞬间"
+                src="https://qbuby.github.io/assets/微信图片_20250809001421_129.jpg"
+                alt="sleep together"
                 class="w-full h-full object-cover"
               />
               <div
@@ -228,8 +241,8 @@
               class="photo-item relative overflow-hidden rounded-lg shadow-md cursor-pointer photo-transform aspect-square lg:col-span-2"
             >
               <img
-                src="https://picsum.photos/id/325/800/400"
-                alt="与婷婷的约会"
+                src="https://qbuby.github.io/assets/微信图片_20250809012204_131.jpg"
+                alt="we get married"
                 class="w-full h-full object-cover"
               />
               <div
@@ -251,10 +264,11 @@
           <h2
             class="text-[clamp(1.8rem,5vw,3rem)] font-romantic text-center text-love-pink mb-6 text-shadow"
           >
-            抓住我的心
+            Try to catch my love:3
           </h2>
           <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
-            点击屏幕上跳动的爱心，收集我对你满满的爱意吧！
+            Click on the pulsating heart on the screen and collect my full love
+            for you
           </p>
 
           <div
@@ -265,13 +279,13 @@
               id="gameScore"
               class="absolute top-4 left-4 bg-love-pink text-white px-4 py-2 rounded-full shadow-md z-10"
             >
-              爱意值: <span id="score">0</span>
+              Love scores: <span id="score">0</span>
             </div>
             <div
               id="gameTime"
               class="absolute top-4 right-4 bg-love-purple text-white px-4 py-2 rounded-full shadow-md z-10"
             >
-              时间: <span id="time">30</span>s
+              Time: <span id="time">30</span>s
             </div>
             <div
               id="gameStartScreen"
@@ -282,29 +296,33 @@
                 id="startGameBtn"
                 class="bg-white text-love-pink font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
               >
-                开始游戏
+                Start
               </button>
             </div>
             <div
               id="gameEndScreen"
               class="absolute inset-0 bg-gradient-to-br from-love-pink/90 to-love-purple/90 flex flex-col items-center justify-center z-20 hidden"
             >
-              <h3 class="text-white text-3xl font-romantic mb-4">太棒了！</h3>
+              <h3 class="text-white text-3xl font-romantic mb-4">Slay~💅✨</h3>
               <p class="text-white text-xl mb-2">
-                你的爱意值: <span id="finalScore">0</span>
+                Your love score: <span id="finalScore">0</span>
               </p>
-              <p class="text-white mb-6">就像我对你的爱，满溢而出</p>
+              <p class="text-white mb-6">
+                Just like my love for you, overflowing 😘
+              </p>
               <button
                 id="restartGameBtn"
                 class="bg-white text-love-pink font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
               >
-                再玩一次
+                Play again
               </button>
             </div>
           </div>
 
           <div class="text-center">
-            <p class="text-gray-600 italic">提示：点击爱心越快，得分越高哦~</p>
+            <p class="text-gray-600 italic">
+              Tip: the faster you click on love, the higher score you can get~
+            </p>
           </div>
         </div>
       </section>
@@ -315,7 +333,7 @@
           <h2
             class="text-[clamp(1.8rem,5vw,3rem)] font-romantic text-center text-love-purple mb-16 text-shadow"
           >
-            我们的时光印记
+            Our precious memories
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -324,17 +342,16 @@
             >
               <div class="flex items-center mb-4">
                 <i class="fa fa-calendar text-love-pink text-2xl mr-3"></i>
-                <h3 class="text-xl font-bold text-gray-800">初次相遇</h3>
+                <h3 class="text-xl font-bold text-gray-800">First sight</h3>
               </div>
               <p class="text-gray-700 mb-3">
-                那一天，阳光正好，你的笑容像一道光，照亮了我的世界
+                On that day, your smile was like a beam of light, illuminating
+                my world
               </p>
-              <div class="text-love-pink font-romantic text-xl">
-                2023年5月20日
-              </div>
+              <div class="text-love-pink font-romantic text-xl">2025.7.12</div>
               <div id="firstMeetCount" class="text-sm text-gray-500 mt-2">
-                已经一起走过
-                <span class="font-bold text-love-purple">0</span> 天
+                We have known each other for
+                <span class="font-bold text-love-purple">29</span> days
               </div>
             </div>
 
@@ -343,16 +360,17 @@
             >
               <div class="flex items-center mb-4">
                 <i class="fa fa-heart text-love-pink text-2xl mr-3"></i>
-                <h3 class="text-xl font-bold text-gray-800">确定关系</h3>
+                <h3 class="text-xl font-bold text-gray-800">Be lovers</h3>
               </div>
               <p class="text-gray-700 mb-3">
-                从朋友到恋人，是我做过最正确的决定，余生请多指教
+                Going from being friends to lovers with you was the most correct
+                decision I have ever made. Please advise me for the rest of my
+                life
               </p>
-              <div class="text-love-pink font-romantic text-xl">
-                2023年7月7日
-              </div>
+              <div class="text-love-pink font-romantic text-xl">2025.7.19</div>
               <div id="relationshipCount" class="text-sm text-gray-500 mt-2">
-                相爱已有 <span class="font-bold text-love-purple">0</span> 天
+                We have been in love for
+                <span class="font-bold text-love-purple">22</span> days
               </div>
             </div>
 
@@ -361,16 +379,18 @@
             >
               <div class="flex items-center mb-4">
                 <i class="fa fa-map-marker text-love-pink text-2xl mr-3"></i>
-                <h3 class="text-xl font-bold text-gray-800">第一次旅行</h3>
+                <h3 class="text-xl font-bold text-gray-800">I'm only yours</h3>
               </div>
               <p class="text-gray-700 mb-3">
-                在陌生的城市，有你在身边，便有了全世界的安全感
+                In this terrible world, I want to be the only special person for
+                you
               </p>
               <div class="text-love-pink font-romantic text-xl">
-                2023年10月1日
+                You are only mine🫶
               </div>
               <div class="text-sm text-gray-500 mt-2">
-                那些风景，因为有你而更加动人
+                Every wonder this world holds grows more radiant because you
+                exist
               </div>
             </div>
 
@@ -379,15 +399,20 @@
             >
               <div class="flex items-center mb-4">
                 <i class="fa fa-star text-love-pink text-2xl mr-3"></i>
-                <h3 class="text-xl font-bold text-gray-800">未来约定</h3>
+                <h3 class="text-xl font-bold text-gray-800">
+                  Future agreement
+                </h3>
               </div>
               <p class="text-gray-700 mb-3">
-                还有更多的日出日落，更多的四季更迭，想与你一同见证
+                There are more sunrises and sunsets, more seasons changing, I
+                want to witness them with you
               </p>
               <div class="text-love-pink font-romantic text-xl">
-                往后余生的每一天
+                Every day of the rest of my life
               </div>
-              <div class="text-sm text-gray-500 mt-2">执子之手，与子偕老</div>
+              <div class="text-sm text-gray-500 mt-2">
+                I wanna hold your hand and get old together with you
+              </div>
             </div>
           </div>
         </div>
@@ -402,7 +427,7 @@
           <h2
             class="text-[clamp(1.8rem,5vw,3rem)] font-romantic text-center text-love-pink mb-12 text-shadow"
           >
-            致我最爱的婷婷
+            For my only love, Tingting
           </h2>
 
           <div class="bg-white rounded-2xl p-8 shadow-xl relative">
@@ -420,30 +445,46 @@
             <div
               class="font-romantic text-[clamp(1.2rem,3vw,1.6rem)] text-gray-700 leading-relaxed space-y-4"
             >
-              <p>亲爱的婷婷，</p>
-              <p>又是一年你的生日，时光匆匆，却带不走我对你日益加深的爱意。</p>
+              <p>Dear Tingting,</p>
               <p>
-                你是清晨的第一缕阳光，是夜晚最亮的星辰，是我平淡生活里的惊喜，是我疲惫时刻的慰藉。
+                This is the first birthday we celebrate together. I'm greedy,
+                and I want to participate in all your next birthdays.
               </p>
               <p>
-                喜欢你的笑容，像孩童般纯粹；喜欢你的善良，温暖身边的每一个人；喜欢你的陪伴，让每一个平凡的日子都变得有意义。
+                You are the first sunshine in the morning, the brightest star at
+                night, the surprise in my ordinary life, and the comfort in my
+                tired time.
               </p>
               <p>
-                愿岁月温柔待你，愿你每天都能笑得像个孩子。愿我们一起走过更多的春夏秋冬，创造更多美好的回忆。
+                I like your smile, as pure as a child; I like your kindness,
+                warm everyone around you; I like your company and make every
+                ordinary day meaningful.
               </p>
-              <p>生日快乐，我最爱的女孩。</p>
-              <p class="mt-8 text-right text-love-pink">永远爱你的人</p>
+              <p>
+                May the years treat you tenderly, and may you smile like a child
+                every day. I hope we can go through more spring, summer, autumn
+                and winter together and create more beautiful memories.
+              </p>
+              <p>Happy birthday, my favorite girl.</p>
+              <p class="mt-8 text-right text-love-pink">
+                Ruhang, who love you forever
+              </p>
             </div>
           </div>
 
-          <!-- 互动爱心按钮 -->
+          <!-- 互动爱心按钮（已启用） -->
           <div class="mt-16 text-center">
-            <p class="text-gray-700 mb-6">点击爱心，送上我的深情告白</p>
-            <button id="loveBtn" class="relative">
+            <p class="text-gray-700 mb-6">Try to click the heart</p>
+            <button
+              id="loveBtn"
+              class="relative inline-flex items-center justify-center"
+            >
               <i
-                class="fa fa-heart text-6xl text-love-pink hover:text-love-purple transition-colors duration-300 transform hover:scale-110 transition-transform"
+                id="loveIcon"
+                class="fa fa-heart text-6xl text-love-pink hover:text-love-purple transition-colors duration-300 transform hover:scale-110"
               ></i>
               <span
+                id="loveText"
                 class="love-text absolute -top-10 left-1/2 transform -translate-x-1/2 bg-love-pink text-white px-3 py-1 rounded-full text-sm opacity-0 transition-opacity"
                 >我爱你</span
               >
@@ -458,10 +499,11 @@
           <h2
             class="text-[clamp(1.5rem,4vw,2.5rem)] font-romantic text-love-purple mb-6"
           >
-            生日快乐，我的李婷婷
+            Happy every day, my love
           </h2>
           <p class="text-gray-600 mb-8">
-            愿你每一天都如彩虹般绚烂，每一刻都被幸福环绕
+            Wish your every day be beautiful like a rainbow, and every moment be
+            surrounded by happiness
           </p>
           <div class="flex justify-center space-x-4 mb-12">
             <i class="fa fa-heart text-love-pink text-2xl animate-pulse"></i>
@@ -473,7 +515,7 @@
             ></i>
           </div>
           <p class="text-gray-500 text-sm">
-            用我全部的爱，为你打造这份特别的生日祝福
+            With all my love, I want to give you this special gift for you
           </p>
         </div>
       </section>
@@ -503,46 +545,34 @@
       document.addEventListener("DOMContentLoaded", function () {
         // 音频控制
         const bgMusic = document.getElementById("bgMusic");
-        const loveBtn = document.getElementById("loveBtn");
 
-        // 播放音乐的函数
+        // 安全获取可选元素
+        const loveBtn = document.getElementById("loveBtn");
+        const loveText = document.getElementById("loveText");
+
+        // 播放音乐的函数（由用户交互触发）
         function playMusic() {
-          if (bgMusic.paused) {
+          if (bgMusic && bgMusic.paused) {
             bgMusic.play().catch((e) => {
+              // 浏览器可能要求用户交互，静默捕捉错误
               console.log("音乐播放需要用户交互", e);
             });
           }
         }
 
-        // 点击爱心按钮播放音乐并显示效果
-        loveBtn.addEventListener("click", function () {
-          playMusic();
-
-          // 显示"我爱你"文字
-          const loveText = this.querySelector(".love-text");
-          loveText.style.opacity = "1";
-          setTimeout(() => {
-            loveText.style.opacity = "0";
-          }, 1500);
-
-          // 创建随机爱心
-          createFallingHearts(5);
-        });
-
         // 开场按钮点击事件
-        document
-          .getElementById("startBtn")
-          .addEventListener("click", function () {
-            playMusic();
-            document.getElementById("opening").style.opacity = "0";
-            setTimeout(() => {
-              document.getElementById("opening").style.display = "none";
-              // 滚动到照片墙
-              document
-                .getElementById("photoWall")
-                .scrollIntoView({ behavior: "smooth" });
-            }, 1000);
-          });
+        const startBtn = document.getElementById("startBtn");
+        startBtn.addEventListener("click", function () {
+          playMusic();
+          document.getElementById("opening").style.opacity = "0";
+          setTimeout(() => {
+            document.getElementById("opening").style.display = "none";
+            // 滚动到照片墙
+            document
+              .getElementById("photoWall")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 1000);
+        });
 
         // 照片墙功能
         const photoItems = document.querySelectorAll(".photo-item");
@@ -552,23 +582,37 @@
 
         photoItems.forEach((item) => {
           item.addEventListener("click", function () {
-            const imgSrc = this.querySelector("img").src;
+            const img = this.querySelector("img");
+            const imgSrc = img ? img.src : "";
+            if (!imgSrc) return;
             photoLarge.src = imgSrc;
             photoViewer.classList.remove("hidden");
             document.body.style.overflow = "hidden";
           });
         });
 
-        closePhoto.addEventListener("click", function () {
+        function closePhotoViewer() {
           photoViewer.classList.add("hidden");
           document.body.style.overflow = "auto";
-        });
+          photoLarge.src = "";
+        }
+
+        closePhoto.addEventListener("click", closePhotoViewer);
 
         // 点击照片查看器背景关闭
         photoViewer.addEventListener("click", function (e) {
           if (e.target === this) {
-            this.classList.add("hidden");
-            document.body.style.overflow = "auto";
+            closePhotoViewer();
+          }
+        });
+
+        // 支持 Esc 关闭图片预览
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            if (!photoViewer.classList.contains("hidden")) {
+              closePhotoViewer();
+            }
+            // 如果结算画面或其他模态也需要Esc处理，可在此扩展
           }
         });
 
@@ -596,6 +640,8 @@
           time = 30;
           scoreDisplay.textContent = score;
           timeDisplay.textContent = time;
+
+          // 隐藏开始与结算界面（但不从 DOM 中移除）
           gameStartScreen.classList.add("hidden");
           gameEndScreen.classList.add("hidden");
 
@@ -618,11 +664,15 @@
         }
 
         function createHearts() {
-          // 每300-800毫秒生成一个爱心
+          // 如果已经有旧的定时器，先清掉
+          clearInterval(heartInterval);
+
+          // 每500毫秒生成一个爱心
           heartInterval = setInterval(() => {
             if (time <= 0) return;
 
             const heart = document.createElement("div");
+            heart.classList.add("heart-item"); // 标记为动态生成的爱心
             const size = Math.random() * 40 + 20; // 20-60px
             const left = Math.random() * (gameContainer.offsetWidth - size);
             const top = Math.random() * (gameContainer.offsetHeight - size);
@@ -658,7 +708,7 @@
 
               setTimeout(() => {
                 if (gameContainer.contains(this)) {
-                  gameContainer.removeChild(this);
+                  this.remove();
                 }
               }, 300);
             });
@@ -669,7 +719,7 @@
                 heart.style.opacity = "0";
                 setTimeout(() => {
                   if (gameContainer.contains(heart)) {
-                    gameContainer.removeChild(heart);
+                    heart.remove();
                   }
                 }, 300);
               }
@@ -678,23 +728,20 @@
         }
 
         function endGame() {
+          // 停掉定时器
           clearInterval(gameInterval);
           clearInterval(heartInterval);
 
-          // 移除所有爱心
-          const hearts = gameContainer.querySelectorAll("div");
-          hearts.forEach((heart) => {
-            if (heart.id !== "gameScore" && heart.id !== "gameTime") {
-              gameContainer.removeChild(heart);
-            }
-          });
+          // 只移除动态生成的爱心（避免误删界面元素）
+          const hearts = gameContainer.querySelectorAll(".heart-item");
+          hearts.forEach((heart) => heart.remove());
 
-          // 显示结束界面
+          // 更新结算分数并显示结算画面
           finalScoreDisplay.textContent = score;
           gameEndScreen.classList.remove("hidden");
         }
 
-        // 计算日期差
+        // 计算日期差（保留原来的简单实现）
         function calculateDays(dateString) {
           const targetDate = new Date(dateString);
           const today = new Date();
@@ -703,15 +750,16 @@
           return diffDays;
         }
 
-        // 更新日期计数
+        // 更新日期计数（与页面显示的日期保持一致）
+        // 如果你想改成包含/不包含当天，可调整 calculateDays 的实现
         document
           .getElementById("firstMeetCount")
-          .querySelector("span").textContent = calculateDays("2023-05-20");
+          .querySelector("span").textContent = calculateDays("2025-07-11");
         document
           .getElementById("relationshipCount")
-          .querySelector("span").textContent = calculateDays("2023-07-07");
+          .querySelector("span").textContent = calculateDays("2025-07-18");
 
-        // 创建掉落的爱心效果
+        // 创建掉落的爱心效果（用于点击右下角的告白按钮等）
         function createFallingHearts(count) {
           for (let i = 0; i < count; i++) {
             const heart = document.createElement("i");
@@ -744,23 +792,25 @@
           }
         }
 
-        // 添加掉落动画样式
-        const style = document.createElement("style");
-        style.textContent = `
-                @keyframes fall {
-                    0% {
-                        transform: translateY(-20px) rotate(0deg);
-                        opacity: 0.8;
-                    }
-                    100% {
-                        transform: translateY(100vh) rotate(720deg);
-                        opacity: 0;
-                    }
-                }
-            `;
-        document.head.appendChild(style);
+        // 事件：点击爱心按钮播放音乐并显示效果（仅在 loveBtn 存在时绑定）
+        if (loveBtn) {
+          loveBtn.addEventListener("click", function () {
+            playMusic();
 
-        // 平滑滚动
+            // 显示"我爱你"文字
+            if (loveText) {
+              loveText.style.opacity = "1";
+              setTimeout(() => {
+                loveText.style.opacity = "0";
+              }, 1500);
+            }
+
+            // 创建随机掉落爱心（视觉效果）
+            createFallingHearts(6);
+          });
+        }
+
+        // 平滑滚动（锚点链接）
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
